@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget UpdateWeather(IconData icon, String temperature, String location) {
+Widget UpdateWeather(String image, String temperature, String location, currentSky,currentSkyDis) {
   return  Center(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(icon, size: 70,color: Colors.white,),
+        Image.network(image, width: 150, height: 150,),
         const SizedBox(height: 20,),
         Text(temperature, style: const TextStyle(fontSize: 40,color: Colors.white),),
         const SizedBox(height: 10,),
@@ -19,8 +19,25 @@ Widget UpdateWeather(IconData icon, String temperature, String location) {
             ),
 
             Text(location, style: const TextStyle(fontSize: 20,color: Colors.white),),
+
           ]
 
+        ),
+
+        SizedBox(height: 20,),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Text(currentSky, style: const TextStyle(fontSize: 20,color: Colors.white),),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Text(currentSkyDis, style: const TextStyle(fontSize: 20,color: Colors.white),),
+            )
+          ]
         )
 
 

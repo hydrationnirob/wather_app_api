@@ -9,7 +9,7 @@ class WeatherClient{
   var url = Uri.parse("https://api.openweathermap.org/data/2.5/weather?q=$Lcity&appid=95186147cc962987255e20ff53ebacdf&units=metric");
   var response = await http.get(url);
   var data = jsonDecode(response.body);
-  print(Weather.fromJson(data).temp);
+  print(response.body);
   return Weather.fromJson(data);
   }
 
