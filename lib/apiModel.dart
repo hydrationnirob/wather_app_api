@@ -1,4 +1,4 @@
-class Wather {
+class Weather {
   String? city;
   double? temp;
   int? pressure;
@@ -6,9 +6,9 @@ class Wather {
   double? windSpeed;
   double? feelsLike;
 
-  Wather({this.city, this.temp, this.pressure, this.humidity, this.windSpeed});
+  Weather({this.city, this.temp, this.pressure, this.humidity, this.windSpeed});
 
-  Wather.fromJson(Map<String, dynamic> json) {
+  Weather.fromJson(Map<String, dynamic> json) {
     city = json['name'];
     temp = json['main']['temp'];
     pressure = json['main']['pressure'];
