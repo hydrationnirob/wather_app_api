@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 String formatTime(DateTime time) {
@@ -26,8 +27,7 @@ Widget UpdateWeather(String image, String temperature, String location, currentS
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.network(image, width: 150, height: 150,),
-        const SizedBox(height: 20,),
-        Text("${temperature}°C", style: const TextStyle(fontSize: 40,color: Colors.white),),
+        Text("${temperature}°C", style: GoogleFonts.anton(fontSize: 50, color: Colors.white)),
         const SizedBox(height: 10,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
