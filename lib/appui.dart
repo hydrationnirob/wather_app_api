@@ -63,16 +63,10 @@ class _AppUIState extends State<AppUI> {
                 "${data!.city}",
                 "${data!.currentSky}",
                 "${data!.description}",
+
               ),
-              SizedBox(height: 40),
-              Text(
-                "Additional Information",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
+
+
               SizedBox(height: 20),
               Divider(color: Colors.white),
               AdditionalInfo(
@@ -80,6 +74,10 @@ class _AppUIState extends State<AppUI> {
                 "${data!.humidity}",
                 "${data!.feelsLike}",
                 "${data!.pressure}",
+                //"${data!.MaxTemp}",
+                //"${data!.MinTemp}",
+                "${data!.MinTemp}",
+                "${data!.MaxTemp}",
               ),
             ],
           )
